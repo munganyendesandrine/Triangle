@@ -13,32 +13,28 @@ function triangleType(){
     var number1=parseInt(document.getElementById("side1").value);
     var number2=parseInt(document.getElementById("side2").value);
     var number3=parseInt(document.getElementById("side3").value);
+    var testTriangle=["Input numbers form an Equilateral triangle","Input numbers form an Isosceles triangle","Input numbers form a Scalene triangle","Sides you input don't form a triangle"];
+
     //Testing if sides are Triangle or not
     if(((number1+number2)>number3) && ((number1+number3)>number2) && ((number2+number3)>number1))
     {
-        alert("All sides form a triangle");
-             if((number1===number2) && (number2===number3))
-             {
-               alert("Input numbers form an Equilateral triangle");
-             }
-             else if((number1===number2)||(number1===number3)||(number2===number3))
-             {
-                alert("Input numbers form an Isosceles triangle");
-             }
-             else if((number1!=number2!=number3) && ((number1+number2)||(number1+number3)|| (number2+number3))>number3)
-             {
-                alert("Input numbers form a Scalene triangle");
-             }
-             
-   }
-   else if((((number1+number2)||(number1+number3)|| (number2+number3))===number3)||(((number1+number2)||(number1+number3)|| (number2+number3))<number3))
-             {
-                alert("Sides you input don't form a triangle");
-             }
-    
+          
+      if((number1===number2) && (number2===number3))
+      {
+        alert(testTriangle[0]);
+      }
+      else if((number1===number2)||(number1===number3)||(number2===number3))
+      {
+        alert(testTriangle[1]);
+      }
+      else if((number1!=number2!=number3) && ((number1+number2)||(number1+number3)|| (number2+number3))>number3)
+      {
+        alert(testTriangle[2]);
+      }      
+    }
     else
     {
-        alert("May be there is some input box you didn't fill, Please Refresh!");
+      alert(testTriangle[3]);
     }
    
 };
